@@ -5,4 +5,3 @@ Please use 1) the translator to compile the use case into go-code and 2) the sim
 
 
 Please download the jar file of the Peer-Model translator first and follow the instructions in the readme file  https://github.com/peermodel/translator#readme.
-Here you find the jar file: https://github.com/peermodel/translator/releases.
