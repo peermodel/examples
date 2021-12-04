@@ -65,7 +65,7 @@ Save the use case as xml and proceed with translation and simulation run, .e., o
 
 Note that instead of creating a new XML file you may also add a further sheet to the original ClientServer use case with another configuration.
 
-Note that as an exercise you may configure many clients. This can be done by havin just one client peer shape and using a range expression as peer name; e.g.; RANGE INDEX.1 IN 1..5 -> client#INDEX.1 will create 5 client instances termed client1, client2, ..., client5. Note that &ldquo;INDEX.1&rdquo; is the name of the index.
+Note that as an exercise you may configure many clients. This can be done by havin just one client peer shape and using a range expression as peer name; e.g.; RANGE INDEX.1 IN 1..5 -> client#INDEX.1 will create 5 client peer instances termed client#1, client#2, ..., client#5. Note that &ldquo;INDEX.1&rdquo; is the name of the index.
 
  
 
