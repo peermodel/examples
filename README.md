@@ -2,7 +2,7 @@
 
 First, please download the jar file of the Peer-Model translator and follow the instructions in the readme file  https://github.com/peermodel/translator#readme there.
 
-Tutorial on how to model a use case and how to use the toolchain: https://youtu.be/SkuHuomUCtY
+Tutorial on how to model a use case and how to use the toolchain: <a href="https://youtu.be/SkuHuomUCtY" target="_blank">youtu.be/SkuHuomUCtY</a>.
 
 
 <hr>
