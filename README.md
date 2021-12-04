@@ -7,7 +7,7 @@ Tutorial on how to model a use case and how to use the toolchain: <a href="https
 
 <hr>
 
-<h2>Open, translate and run an existing use case with Draw.io</h2>
+<h2>Open, translate and run an existing use case</h2>
 
 <h3>Open https://www.draw.io in a browser</h3>
 
@@ -42,5 +42,37 @@ See https://github.com/peermodel/translator/blob/main/README.md.
 
 The result of the simulation run will show the state of space after the run has terminated, namely all PIC and POC containers of peers that are not empty. In our case you will see the POC of client1 peer containing the received answer entry whose property answer is set to the message received from the superServer peer.
 
+
+<hr>
+
+<h2>Create a new use case with Draw.io</h2>
+
+<h3>Open https://www.draw.io in a browser</h3>
+
+<h3>Create New Diagram</h3>
+
+Select Blank Diagram and say Create.
+
+Select a name under which you store it in <em>LDIR</em>/examples/_USE-CASES/_DRAWIO/Apps/. Note: <em>LDIR</em> is the directory where you checked out the examples found in https://github.com/peermodel/examples.
+
+<h3>Load Peer Model Shapes</h3>
+
+File -> Open Library from -> Device
+
+Goto <em>LDIR</em>/examples/_DRAWIO-SHAPES and open the most recent version of PeerModel_SHAPES (which is an XML file) there.
+
+<h3>Model the use case</h3>
+
+See Tutorial : <a href="https://youtu.be/SkuHuomUCtY" target="_blank">youtu.be/SkuHuomUCtY</a>.
+
+See paper on A Practical Tool-Chain for the Development of Coordination Scenarios https://link.springer.com/chapter/10.1007%2F978-3-030-78142-2_15 and references found there.
+
+<h3>Store the use case as not-compressed xml</h3>
+
+See above.
+
+<h3>Translate and run the use case</h3>
+
+See https://github.com/peermodel/translator/blob/main/README.md.
 
 
