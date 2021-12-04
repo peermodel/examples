@@ -25,7 +25,7 @@ The ClientServer diagram has 4 drawings:
 
 <strong>EntryTypes</strong>: This diagram contains the needed entry types termed request and answer. Request has an entry property (eprop) named client (holding the URL of a client peer). Answer has two properties termed server (holding the URL of a server peer) and answer (holding the reply message string). 
 
-<strong>PeerType: Server</strong>: This diagram contains the Peer Model of the server peer. First the peer type must be specified which is termed Server. It has one wiring referred to as reply. Guard 1 of the wiring waits for an answer entry, takes it from the peer's PIC (peer-input-container) and remembers the value of its client property in a local variable termed $client. Action 1 of the wiring creates an answer entry, sets its answer property to &ldquo;answer from this server&rdquo; and sends it back to the client whose URL was found in the local variable. Note that asynchronous sending is done by setting the link property (lprop) named dest (destination) to the URL of the peer to whom the entries collected along the action link shall be sent. This causes the entries to be written in the PIC of the system peer termed I/O which in turn will (asynchronously) treat these entries and write them to the PIC of the peer denoted in the dest property.
+<strong>PeerType: Server</strong>: This diagram contains the Peer Model of the server peer. First the peer type must be specified which is termed Server. It has one wiring referred to as reply. Guard 1 of the wiring waits for an answer entry, takes it from the peer's PIC (peer-input-container) and remembers the value of its client property in a local variable termed $client. Action 1 of the wiring creates an answer entry, sets its answer property to &ldquo;answer from this server&rdquo; and sends it back to the client whose URL was found in the local variable. Note that asynchronous sending is done by setting the link property (lprop) named dest (destination) to the URL of the peer to whom the entries collected along the action link shall be sent. This causes the entries to be written in the PIC of the system peer termed IOP (i/o peer) which in turn will (asynchronously) treat these entries and write them to the PIC of the peer denoted in the dest property.
 
 <strong>PeerType: Client</strong>: This diagram contains the client peer type. Its name is Client and it has one property declaration, namely server of type URL. This property is set in the configuration to the actual name of the server peer, which in our case is called superServer. The rest of this drawing models the behavior of the client peer with two wirings called start and stop. Guard 1 of the start wiring removes the system entry INIT (which is created by the system in a peer's PIC if the peer is instantiated) from the peer's PIC, and action 1 creates a request entry, sets its client property to the own peer ID, and sets the action link's dest property to the server peer configured in the client peer's server property. Note that own peer properties can be accessed within a peer with the qualifier &ldquo;PEER&rdquo;. Note that $$PID is a system variable that holds the own peer's ID, which is of type URL. Guard 1 of the stop wiring takes an answer entry from the POC (note that the link is blocked until the response is there) and writes it in action 2 to the POC (peer-output-container); in addition, it creates a STOP entry and sends it to the Stop peer (action 2). Note that STOP is a system-defined entry type and Stop is a system peer that upon receipt of a STOP entry shut down the entire system.
 
@@ -42,6 +42,32 @@ See https://github.com/peermodel/translator/blob/main/README.md.
 
 The result of the simulation run will show the state of space after the run has terminated, namely all PIC and POC containers of peers that are not empty. In our case you will see the POC of client1 peer containing the received answer entry whose property answer is set to the message received from the superServer peer.
 
+
+<hr>
+
+<h2>Extend the above use case</h2>
+
+Store the above use case that you have still opened in the browser under a new name in <em>LDIR</em>/examples/_USE-CASES/_DRAWIO/Apps/, e.g. call it TwoClientsOneServer.xml.
+
+In Drawing &ldquo;Config : One&rdquo;: Drag the shape &ldquo;Peer&rdquo; to the drawing. Caution: Do not take Peer Type but Peer shape. Configure a further client peer termed client2, of type Client and with server property set to superServer.
+
+Save the use case as xml and proceed with translation and simulation run, .e., open a powershell and change directory to <em>LDIR</em>:
+
+  <b>cd </b><em>LDIR</em>
+
+  <b>java -jar ./peermodel-translator-2.0.0.jar DRAWIO ./examples/ Apps/ TwoClientsOneServer One GO-CODE</b>
+
+  <b>cd </b><em>LDIR</em><b>/examples/_GO-AUTOMATON/src/useCases/Apps/TwoClientsOneServer/test</b>
+  
+  <b>go test</b>
+  
+  Run the use case may times. You will get different results. E.g., the order in which client1 and client2 write the answer to their respective POC can be different (see updateEvtTime of the container); if might happen that both clients get the answer back and write it to the POC; or that only one client gets an answer and stops the system before the server can treat the request of the other client; or that one client writes the answer to the POC and the answer of the other client is still in its PIC. See traces produced by the Watch service and the result state of the space, i.e. its PIC and POC containers. Note that entries that have not yet been delivered are still contained in the PIC of the IOP.
+
+Note that instead of creating a new XML file you may also add a further sheet to the original CleintServer use case with another configuration.
+
+Note that as an exercise you may configure many clients. This can be done by adding just one client peer and using a range expression as peer name; e.g.; RANGE INDEX.1 IN 1..5 -> client#INDEX.1 will create 5 client instances termed client1, client2, ..., client5.
+
+ 
 
 <hr>
 
@@ -74,5 +100,4 @@ See above.
 <h3>Translate and run the use case</h3>
 
 See https://github.com/peermodel/translator/blob/main/README.md.
-
 
