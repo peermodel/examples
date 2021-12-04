@@ -61,11 +61,11 @@ Save the use case as xml and proceed with translation and simulation run, .e., o
   
   <b>go test</b>
   
-  Run the use case may times. You will get different results. E.g., the order in which client1 and client2 write the answer to their respective POC can be different (see updateEvtTime of the container); if might happen that both clients get the answer back and write it to the POC; or that only one client gets an answer and stops the system before the server can treat the request of the other client; or that one client writes the answer to the POC and the answer of the other client is still in its PIC. See traces produced by the Watch service and the result state of the space, i.e. its PIC and POC containers. Note that entries that have not yet been delivered are still contained in the PIC of the IOP.
+  Run the use case may times. You will get different results. E.g., the order in which client1 and client2 write the answer to their respective POC can be different (see updateEvtTime of the container); it might happen that both clients get the answer back and write it to the POC; or that only one client gets an answer and stops the system before the server can treat the request of the other client; or that one client writes the answer to the POC and the answer of the other client is still in its PIC. See traces produced by the Watch service and the result state of the space, i.e. its PIC and POC containers. Note that entries that have not yet been delivered are still contained in the PIC of the IOP.
 
-Note that instead of creating a new XML file you may also add a further sheet to the original CleintServer use case with another configuration.
+Note that instead of creating a new XML file you may also add a further sheet to the original ClientServer use case with another configuration.
 
-Note that as an exercise you may configure many clients. This can be done by adding just one client peer and using a range expression as peer name; e.g.; RANGE INDEX.1 IN 1..5 -> client#INDEX.1 will create 5 client instances termed client1, client2, ..., client5.
+Note that as an exercise you may configure many clients. This can be done by havin just one client peer shape and using a range expression as peer name; e.g.; RANGE INDEX.1 IN 1..5 -> client#INDEX.1 will create 5 client instances termed client1, client2, ..., client5. Note that &ldquo;INDEX.1&rdquo; is the name of the index.
 
  
 
