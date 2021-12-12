@@ -101,3 +101,36 @@ See above.
 
 See https://github.com/peermodel/translator/blob/main/README.md.
 
+
+<h3>Literature</h3>
+
+http://www.complang.tuwien.ac.at/eva/publications.html
+
+Eva Maria Kuehn, A Practical Tool-Chain for the Development of Coordination Scenarios: Graphical Modeler, DSL, Code Generators and Automaton-Based Simulator, COORDINATION 2021 Conference, Springer, LNCS, 2021.
+https://link.springer.com/chapter/10.1007/978-3-030-78142-2_15
+
+Eva Kuehn, Reusable Coordination Components: Reliable Development of Cooperative Information Systems, International Journal of Cooperative Information Systems (IJCIS), World Scientific Publishing Company, Vol. 25, No. 04, 2016.
+http://www.worldscientific.com/doi/abs/10.1142/S0218843017400019?src=recsys
+
+Eva Kuehn, Stefan Craß, Gerson Joskowicz, Alexander Marek, and Thomas Scheller, Peer-Based Programming Model for Coordination Patterns, in Proceedings of the 15th International Conference on Coordination Models and Languages (COORDINATION), held as part of the 8th International Federated Conference on Distributed Computing Techniques (DisCoTec), Rocco De Nicola and Christine Julien (editors), Springer, Lecture Notes in Computer Science (LNCS), Volume 7890, Florence, Italy, June 3-5, pp. 121-135, 2013. [
+http://link.springer.com/chapter/10.1007%2F978-3-642-38493-6_9
+
+Eva Kuehn, Sophie Therese Radschek and Nahla Elaraby, Distributed Coordination Runtime Assertions for the Peer Model, 20th International Conference on Coordination Models and Languages (COORDINATION), part of the 13th International Federated Conference on Distributed Computing Techniques (DisCoTec), Madrid, Spain, June 18 - 21 2018.
+https://rd.springer.com/chapter/10.1007/978-3-319-92408-3_9
+
+Eva Kuehn, Flexible Transactional Coordination in the Peer Model, Fundamentals of Software Engineering - 7th International Conference, Mehdi Dastani, Marjan Sirjani (editors), Springer, Lecture Notes in Computer Science (LNCS), 2017.
+https://doi.org/10.1007/978-3-319-68972-2_8
+
+Nahla Elaraby, Eva Kuehn, Anita Messinger and Sophie Therese Radschek, Towards a Hybrid Verication Approach, 16th Int. Workshop on Foundations of Coordination Languages and Self-Adaptive Systems (FOCLASA), Associated with STAF/SEFM, Springer, Toulouse, France, 2018.
+https://rd.springer.com/chapter/10.1007%2F978-3-030-04771-9_27
+
+Eva Kuehn, Stefan Craß, Thomas Hamböck, Approaching Coordination in Distributed Embedded Applications with the Peer Model DSL, in Proceedings of the 40th Euromicro Conference series on Software Engineering and Advanced Applications (SEAA), IEEE, Verona, Italy, August 27-29, 2014.
+http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6928791
+
+Eva Kuehn, Stefan Craß, Gerson Joskowicz, and Martin Novak, Flexible Modeling of Policy-Driven Upstream Notification Strategies, in Proceedings of the 29th Symposium On Applied Computing (SAC), ACM, Gyeongju, Korea, March 24 - 28, 2014. 
+https://dl.acm.org/doi/10.1145/2554850.2555153
+
+Eva Kuehn, Stefan Craß and Gerald Schermann, Extending a Peer-based Coordination Model with Composable Design Patterns, 23rd Euromicro International Conference on Parallel, Distributed, and Network-Based Processing (PDP), IEEE, Turku, Finland, March 4-6, 2015.
+http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=7092700
+
+
