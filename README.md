@@ -102,7 +102,9 @@ See above.
 See https://github.com/peermodel/translator/blob/main/README.md.
 
 
-<h3>Literature</h3>
+<hr>
+
+<h2>Literature</h2>
 
 http://www.complang.tuwien.ac.at/eva/publications.html
 
